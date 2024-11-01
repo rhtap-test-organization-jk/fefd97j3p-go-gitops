@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: fefd97j3p-go-gitops
+  description: This is GitOps manifest for fefd97j3p-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: fefd97j3p-go
+    backstage.io/kubernetes-id: fefd97j3p-go 
+    backstage.io/techdocs-ref: dir:. 
+    jenkins.io/job-full-name: fefd97j3p-go-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:fefd97j3p-go
